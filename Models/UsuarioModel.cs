@@ -6,6 +6,6 @@ namespace Practica1.Models{
         public string nombreUsuario {get; set;}
         public string contraseñaUsuario {get; set;}
         
-        public string apellidoUusuario {get; set;}
+        public string apellidoUsuario {get; set;}
     }
 }
