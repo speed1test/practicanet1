@@ -23,14 +23,14 @@ namespace Practica1.Repository {
         List < SqlParameter > listaParametroSalida = new List < SqlParameter > {
 
         };
-        DataTable objetoSalida = ejecucionSP.ExecuteSPWithDataReturn("", listaParametro, con);
+        DataTable objetoSalida = ejecucionSP.ExecuteSPWithDataReturn("SP_OBTENER_PRODUCTOS", listaParametro, con);
         if (objetoSalida.Rows.Count > 0) {
           for (int i = 0; i < objetoSalida.Rows.Count; i++) {
             ProductoModel objeto = new ProductoModel();
             objeto.idProducto = Convert.ToInt32(objetoSalida.Rows[i]["IDPRODUCTO"]);
             objeto.tituloProducto = objetoSalida.Rows[i]["TITULOPRODUCTO"].ToString();
             objeto.precioProducto = Convert.ToDouble(objetoSalida.Rows[i]["PRECIOPRODUCTO"]);
-            objeto.fechaIngresoProducto = Convert.ToDateTime(objetoSalida.Rows[i]["INGRESOPRODUCTO"].ToString());
+            objeto.fechaIngresoProducto = objetoSalida.Rows[i]["INGRESOPRODUCTO"].ToString();
             productos.Add(objeto);
 
           }

@@ -7,6 +7,7 @@ namespace Practica1.Models
         public int idProducto {get; set;}
         public string tituloProducto{get; set;}
         public double precioProducto{get;set;}
+        public string fechaIngresoProducto{get;set;}
     }
     public class CateogoriaModel{
         public int idCategoria{get;set;}
@@ -26,6 +27,7 @@ namespace Practica1.Models
     public class CompraModel {
         public int idCompra {get;set;}
         public DetalleModel fkCompraDetalle {get; set;}
+        public DateTime fechaCompra {get; set;}
 
     }
 }
