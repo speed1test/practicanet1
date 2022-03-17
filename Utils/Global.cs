@@ -1,5 +1,5 @@
 using System;
-namespace ForoWeb.Utils
+namespace Practica1.Utils
 
 {
     public class Global

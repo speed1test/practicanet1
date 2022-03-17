@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace ForoWeb.Utils
+namespace Practica1.Utils
 {
     public class ejecucionSP
     {
