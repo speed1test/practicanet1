@@ -8,4 +8,10 @@ namespace Practica1.Models
         public string tituloProducto{get; set;}
         public double precioProducto{get;set;}
     }
+    public class CateogoriaModel{
+        public int idCategoria{get;set;}
+        public string tituloCategoria{get;set;}
+        public string descripcionCategoria{get;set;}
+
+    }
 }
