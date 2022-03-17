@@ -14,4 +14,18 @@ namespace Practica1.Models
         public string descripcionCategoria{get;set;}
 
     }
+    public class DetalleModel{
+        public int idDetalle {get; set;}
+        public ProductoModel fkProductoDetalle {get; set;}
+    }
+    public class CarritoModel{
+        public int idCarrito{get; set;}
+        public DetalleModel fkCarritoDetalle {get; set;}
+        //public 
+    }
+    public class CompraModel {
+        public int idCompra {get;set;}
+        public DetalleModel fkCompraDetalle {get; set;}
+
+    }
 }
