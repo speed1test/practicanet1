@@ -1,6 +1,9 @@
 @{
     ViewData["Title"] = "Productos";
 }
+@{
+    int indx=0;
+}
 
 <center>
     <h1>Productos disponibles: </h1>
@@ -8,4 +11,28 @@
     {
         <p>@item.tituloProducto</p>
     }
+    <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      @foreach (ProductoModel item in ViewBag.producto)
+      {
+        <tr>
+            <th scope="row">@(ViewBag.producto.IndexOf(item)+1) </th>
+            <td>@item.tituloProducto</td>
+            <td></td>
+            <td></td>
+        </tr>
+      }
+    
+
+  </tbody>
+</table>
 </center>
