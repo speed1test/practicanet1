@@ -4,4 +4,8 @@
 
 <center>
     <h1>Productos disponibles: </h1>
+    @foreach (ProductoModel item in ViewBag.producto)
+    {
+        <p>@item.tituloProducto</p>
+    }
 </center>
